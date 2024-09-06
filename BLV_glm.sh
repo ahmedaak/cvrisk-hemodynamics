@@ -79,6 +79,6 @@ fslmerge -t $DATA_DIR/glm/merge_cov2mni.nii.gz $(cat ${DATA_DIR}/glm/paths_to_co
 Text2Vest $DATA_DIR/glm/design.txt $DATA_DIR/glm/design.mat
 
 # run randomise (make sure design.con has already been created)
-randomise_parallel -i $DATA_DIR/glm/merge_bd2mni.nii.gz -o $DATA_DIR/glm/glm_bd_ -d $DATA_DIR/glm/design.mat -t $DATA_DIR/glm/design.con -D -T -n 5000
-randomise_parallel -i $DATA_DIR/glm/merge_cov2mni.nii.gz -o $DATA_DIR/glm/glm_cov_ -d $DATA_DIR/glm/design.mat -t $DATA_DIR/glm/design.con -D -T -n 5000
+randomise_parallel -i $DATA_DIR/glm/merge_bd2mni.nii.gz -o $DATA_DIR/glm/glm_bd_ -d $DATA_DIR/glm/design.mat -t $DATA_DIR/glm/design.con -T -n 5000
+randomise_parallel -i $DATA_DIR/glm/merge_cov2mni.nii.gz -o $DATA_DIR/glm/glm_cov_ -d $DATA_DIR/glm/design.mat -t $DATA_DIR/glm/design.con -T -n 5000
 
